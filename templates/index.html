@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Home
+{% endblock %}
+
+{% block content %}
+<form class="form-detail" action="/search" method="get">
+    
+    <div class="form-row">
+        <label class="form-row-inner">
+            <input type="text" name="book" id="" class="input-text" required placeholder="Book information: Isbn, Title or Author">
+              <span class="border"></span>
+        </label>
+    </div>
+    <div class="form-row-last">
+		<input type="submit" name="search" class="register" value="Search">
+	</div>
+</form>
+{% endblock %}
+

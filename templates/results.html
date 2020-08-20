@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    result
+{% endblock %}
+
+{% block content %}
+
+<h3>Search Results {{ session.user_username }}</h3>
+<div class="dropdown-divider"></div>
+
+<div class="container results-container">
+    
+    {% for book in books %}
+    <section>
+        <article>
+          <aside class="container">
+              <ul class="list-group">
+                <li class="list-group-item active"><strong>Title</strong>: {{book['title']}}</li>
+                <li class="list-group-item active"><strong>Isbn</strong>: {{book.isbn}}</li>
+                <li class="list-group-item active"><strong>Author</strong>: {{book['author']}}</li>
+                <li class="list-group-item active"><strong>Year</strong>: {{book['year']}}</li>
+                </ul><br>
+              <a href="/book/{{book['isbn']}}" class="btn btn-book btn-info"> <i class="fa fa-chevron-right"></i>Go to book page</a>
+            </aside>
+        </article>
+    </section>
+    {% endfor %}
+</div>
+    
+{% endblock %}
+

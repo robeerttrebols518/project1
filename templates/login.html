@@ -1,0 +1,65 @@
+{% extends "layout.html" %}
+{% block title%}
+    Login
+{% endblock%}
+
+{% block login %}
+
+
+<form class="form-detail" action="/login" method="post">
+    <div class="form-row">
+        <label class="form-row-inner">
+            <input type="text" name="username" id="your_email" class="input-text" required>
+            <span class="label">Login user</span>
+              <span class="border"></span>
+        </label>
+    </div>
+
+    <div class="form-row">
+        <label class="form-row-inner">
+            <input type="password" name="password" id="password" class="input-text" required>
+            <span class="label">Password</span>
+            <span class="border"></span>
+        </label>
+    </div>
+
+    <div class="form-row-last">
+		<input type="submit" name="login" class="register" value="Login">
+	</div>
+</form>
+
+{% endblock %}
+
+{% block register %}
+
+  
+    <form class="form-detail" action="/loginRegister" method="post">
+        <div class="form-row">
+            <label class="form-row-inner">
+                <input type="text" name="username" id="full_name_1" class="input-text" required>
+                <span class="label">Username</span>
+                  <span class="border"></span>
+            </label>
+        </div>
+        
+        <div class="form-row">
+            <label class="form-row-inner">
+                <input type="password" name="password" id="password" class="input-text" required>
+                <span class="label">Password</span>
+                <span class="border"></span>
+            </label>
+        </div>
+
+        <div class="form-row">
+            <label class="form-row-inner">
+                <input type="password" name="confirmation" id="confirmation" class="input-text" required>
+                <span class="label">Comfirm Password</span>
+                <span class="border"></span>
+            </label>
+        </div>
+
+        <div class="form-row-last">
+            <input type="submit" name="register" class="register" value="Sign In">
+        </div>
+    </form>
+{% endblock %}
